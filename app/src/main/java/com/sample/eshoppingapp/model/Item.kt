@@ -3,10 +3,11 @@ package com.sample.eshoppingapp.model
 import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Items")
-data class Items(
+data class Item(
 
     @ColumnInfo(name = "name")
     @NonNull
@@ -16,11 +17,11 @@ data class Items(
     @NonNull
     var price: Double,
 
-    @ColumnInfo(name = "gst_percentage")
+    @ColumnInfo(name = "gstPercentage")
     @NonNull
     var gstPercentage: Double,
 
-    @ColumnInfo(name = "image_url")
+    @ColumnInfo(name = "imageUrl")
     @NonNull
     var imageUrl: String
 
@@ -29,4 +30,7 @@ data class Items(
     @ColumnInfo(name = "id")
     @NonNull
     var id: Int? = null
+
+    @Ignore
+    var quantity: Int = 0
 }

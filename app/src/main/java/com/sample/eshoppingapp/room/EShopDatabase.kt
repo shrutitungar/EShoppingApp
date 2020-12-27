@@ -4,9 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.sample.eshoppingapp.model.Items
+import com.sample.eshoppingapp.model.Item
 
-@Database(entities = arrayOf(Items::class), version = 1, exportSchema = false)
+@Database(entities = arrayOf(Item::class), version = 1, exportSchema = false)
 abstract class EShopDatabase : RoomDatabase() {
 
     abstract fun getShoppingDao(): DAOAccess
